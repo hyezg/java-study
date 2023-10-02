@@ -36,8 +36,8 @@
 |'\f'|폼피드|'\\'|백슬래시|
 <p>
   Q) null은 기본 타입에 사용될 수 있을까? (O/X) ->X <p>
-    int n = null; // 오류 기본타입이라,  <p>
-    String str = null; //정상 객체 레퍼런스에 대입O
+      int n = null; // 오류 기본타입이라,  <p>
+      String str = null; //정상 객체 레퍼런스에 대입O
 
 - import문 : import java.util.Scanner;
 
