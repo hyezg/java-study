@@ -34,6 +34,45 @@
 - do while : do{
       작업문
   } while(조건식);
+
+- if문 : if(조건식) { 실행문장 }
+    조건식은 비교연산,논리연산이 혼합된 식으로 결과값은 boolean값. (boolean타입의 변수 하나만으로도 가능함)
+- if else : if(조건식) {
+        실행문장1
+    }
+            else   {
+            실행문장2
+    }
+
+- 다중 if-else : if() {}
+  else if() {}
+  else if() {}
+  else{}
+
+- switch문 : switch(식) {
+case 값1:
+실행문장1;
+break;
+case 값2:
+실행문장2;
+break;
+default:
+실행문장 n;
+
+### Q) i = a>b? a-b:b-a;를 if-else 문으로 바꾸면?
+-> if(a>b)
+i= a-b;
+else
+i = b-a;
+
+### Q) default문은 생략가능하다(o,x)
+->o
+
+### Q) switch문에서 case문의 값은 어떤 리터럴을 허용하나?(3개) 
+-> 정수리터럴,문자리터럴,문자열리터럴 ( case문에는 변수(a)나 식(a>3) X )
+
+
+
 ## ch07. 여러 개를 하나에 넣을 수는 없을까요? 배열~
 
 ## ch08. 참조 자료형에 대해서 알아봅시다.
