@@ -30,31 +30,46 @@ for(초기문; 조건식; 반복 후 작업) {
 ```
   - 순서 : 1-초기문, 2-조건식, 3-작업문, 4- 반복 후 작업
  
-- while문 : ```java while(조건식) {
+- while문 :
+- ```java
+  while(조건식) {
             작업문
       }
   ```
   - 반복 조건이 true면 반복, false면 반복 종료, 조건에 맞는게 없다면 컴파일 오류, 처음부터 반복조건을 통과한 후 작업문 수행
 
-- do while : do{
+- do while :
+```java
+  do{
       작업문
   } while(조건식);
-
-- if문 : if(조건식) { 실행문장 }
+```
+- if문 :
+```java
+if(조건식) {
+  실행문장
+}
+```
     조건식은 비교연산,논리연산이 혼합된 식으로 결과값은 boolean값. (boolean타입의 변수 하나만으로도 가능함)
-- if else : if(조건식) {
-        실행문장1
-    }
-            else   {
-            실행문장2
-    }
-
-- 다중 if-else : if() {}
+- if else :
+```java
+if(조건식) {
+  실행문장1
+}
+  else   {
+  실행문장2
+}
+```
+- 다중 if-else :
+```java
+if() {}
   else if() {}
   else if() {}
   else{}
-
-- switch문 : switch(식) {
+```
+- switch문 :
+```java
+switch(식) {
 case 값1:
 실행문장1;
 break;
@@ -63,6 +78,7 @@ case 값2:
 break;
 default:
 실행문장 n;
+```
 
 ### Q) i = a>b? a-b:b-a;를 if-else 문으로 바꾸면?
 -> if(a>b)
@@ -84,13 +100,15 @@ i = b-a;
   1. 배열에 대한 레퍼런스 변수 선언
   2. 배열생성-배열의 저장 공간 할당
 1. 배열에 대한 레퍼런스 변수 선언
-<pre>
-<code>
-   int intArray [];
-</code>
-</pre>
-배열타임
-
+```java
+int intArray [];
+```
+( int(배열타입)  intArray(배열에 대한 레퍼런스 변수) []배열선언 )
+2. 배열 생성
+```
+intArray = new int [5]
+```
+( intArray(배열에 대한 레퍼런스 변수) new(배열 생성) int(타입) 5(원소개수) )
 
 ## ch08. 참조 자료형에 대해서 알아봅시다.
 
