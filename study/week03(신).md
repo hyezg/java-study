@@ -133,6 +133,11 @@ int intArray[] = {4,3,2,1,0};
 int intArray[] = new int[5];  //예시
 int myArray[] = intArray;  //치환
 ```
+- 배열의 크기 : length 필드를 이용해 배열의 크기를 알 수 있음
+```java
+int intArry [] = new int [5];
+int size = intArray.length;
+```
 
 
 ## ch08. 참조 자료형에 대해서 알아봅시다.
