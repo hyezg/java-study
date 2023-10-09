@@ -18,7 +18,6 @@ public class Ex01 {
 		}
 		
 		System.out.println("가장 큰 수는 : "+max);
-		
 	}
 
 }
