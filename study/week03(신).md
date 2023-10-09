@@ -103,7 +103,7 @@ i = b-a;
 ```java
 int intArray [];
 ```
-( int(배열타입)  intArray(배열에 대한 레퍼런스 변수) []배열선언 )  <p>
+( int(배열타입)  intArray(배열에 대한 레퍼런스 변수) [](배열선언) )  <p>
 2. 배열 생성
 ```
 intArray = new int [5]
@@ -126,6 +126,14 @@ int intArray[] = new int[5]; //선언과 동시에 생성
 ```
 int intArray[] = {4,3,2,1,0};
 ```
+
+- 배열의 인데스 : 정수만 가능, 0부터 시작함
+- 배열 공유: 다수의 레퍼런스 변수가 하나의 배열 공간을 가리키는 것.
+```java
+int intArray[] = new int[5];  //예시
+int myArray[] = intArray;  //치환
+```
+
 
 ## ch08. 참조 자료형에 대해서 알아봅시다.
 
