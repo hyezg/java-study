@@ -5,7 +5,6 @@ public class Ex01 {
 	public static void main(String[] args) {
 		int intArray[];
 		intArray = new int [5];
-		int n=0;
 		int max=0;
 		
 		Scanner sc = new Scanner(System.in);
