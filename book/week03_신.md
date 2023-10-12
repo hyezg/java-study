@@ -139,6 +139,28 @@ int intArry [] = new int [5];
 int size = intArray.length;
 ```
 
-
+- for-each문 : 
+```
+int [] num = {1,2,3,4,5};
+int sum=0;
+for(int k : num)  //num이 배열자리, k는 n[0], n[1]...n[4]로 반복
+  sum +=k;
+Systerm.out.println("합은 "+sum);  //합은 15
+```
+- 2차원 배열 선언
+```
+int intArray[][];   //방법1
+char charArray[][];
+int[][] intArray;  //방법2
+```
+- 2차원 배열 생성
+```
+intArray = new int[2][5];  //방법1
+int intArray[][] = new int[2][5];  //방법2
+```
+- 2차원 배열 선언, 생성, 초기화
+```
+int intArray[][] = {{0,1,2},{3,4,5},{6,7,8}};
+```
 ## ch08. 참조 자료형에 대해서 알아봅시다.
 
