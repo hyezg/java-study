@@ -162,5 +162,21 @@ int intArray[][] = new int[2][5];  //방법2
 ```
 int intArray[][] = {{0,1,2},{3,4,5},{6,7,8}};
 ```
+### Q) 2차원 배열의 length
+```
+int i[][] = new int[2][5];  //
+```
+- i.length 몇일까? ->2차원 배열의 행의 개수로서 2
+- i[0].length 는 몇일까? -> 0번째 행의 열의 개수로서 5
+- i[1].length 는 몇일까? -> 1번째 행의 열의 개수로서 5
+
+- ArrayList : 배열의 크기가 자동으로 변경되는 배열
+  + ex) add(),get(i),remove(), set()
+  + get(i) :  요소값밖에 못옴
+- ArrayList<String> list = new ArrayList<>();
+  + Sting : 자료형 못옴, int (X), Integer (O), 클래스밖에 못옴
+  + ex) list.add("철수");
+  + ex) String name = list.get(0);
+  + ex) list.remove(0);  //1번째 요소 삭제
 ## ch08. 참조 자료형에 대해서 알아봅시다.
 
