@@ -216,4 +216,32 @@ for(Week today : Week.valus())  {
 }
 ```
 
-
+- 인터페이스(interface)
+```java
+public class 클래스_이름 implements 인터페이스_이름 {
+  반환형 추상메소드1 {
+  }
+  반환형 추상메소드2 {
+  }
+``` 
+- public 생략 가능함
+- 구성요소들의 특징
+    + 상수 : public만 허용, public static final 생략
+    + 추상메서드 : public abstract 생략 가능  //ex) void sendCall();
+    + default 메소드 : 인터페이스에 코드가 작성된 메소드, 인터페이스를 구현한는 클래스에 자동 상속,public 접근 지정만 허용.생략가능
+    + private 메소드 : 인터페이스 내에 메소드 코드가 작성되어야함, 인터페이스 내에 있는 다른 메소드 에 의해서만 호출가능
+    + static 메소드 : public, private 모두 지정 가능 , 생략하면 public
+- 인터페이스의 특징
+  + 인터페이스의 객체 생성 불가
+```java
+new PhoneInterface();  //오류
+```
+  + 인터페이스 타입의 레퍼런스 변수 선언 가능
+```
+PhoneInterface galaxy; //galaxy는 인터페이스에 대한 레퍼런스 변수 
+```
+  + 인터페이스 구현 : 인터페이스를 상속받는 클래스는 인터페이승의 모든 추상 메소드 반드시 구현해야함
+  + 다른 인터페이스 상속 가능
+  + 인터페이스의 다중 상속 가능
+  + 
+    
