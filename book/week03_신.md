@@ -164,11 +164,11 @@ int intArray[][] = {{0,1,2},{3,4,5},{6,7,8}};
 ```
 ### Q) 2차원 배열의 length
 ```
-int i[][] = new int[2][5];  //
+int i[][] = new int[2][5];  //배열
 ```
 - i.length 몇일까? ->2차원 배열의 행의 개수로서 2
 - i[0].length 는 몇일까? -> 0번째 행의 열의 개수로서 5
-- i[1].length 는 몇일까? -> 1번째 행의 열의 개수로서 5
+- i[1].length 는 몇일까? -> 1번째 행의 열의 개수로서 5  <p>
 
 - ArrayList : 배열의 크기가 자동으로 변경되는 배열
   + ex) add(),get(i),remove(), set()
@@ -179,7 +179,14 @@ int i[][] = new int[2][5];  //
   + ex) String name = list.get(0);
   + ex) list.remove(0);  //1번째 요소 삭제
 ## ch08. 참조 자료형에 대해서 알아봅시다.
-- 열거 : 한정된 값만을 갖는 자료형. 주로 상수들의 묶음으로 쓰임
+- 대표적인 참고자료형 : String클래스,인터페이스(Interface),배열(Array),열거(Enumeration)
+    - 특징 : 기본값이 없어 null이 존재함.
+    - stact메모리에 주소값이 저장되고, heap메모리에 실제 값이 저장됨.
+    - 배열의 범위를 벗어나거나 null인 참조변수의 멤버를 호출하는 등의 행위에서 런타임 에러가 발생함.
+      (런타임에러 : 컴파일이 끝난 후 실행 도중에 발생하는 에러/ 컴파일 에러 : 실행전에 발생하는 에러) 
+### Q) 기본 자료형과 참조자료형의 차이점은? 
+-> 기본자료형은 기본값이 있고 stact 메모리에 실제 값이 저장됨
+- 열거 : 한정된 값만을 갖는 자료형. 주로 상수들의 묶음으로 쓰임  <p>
 ```java
 public enum Week {
   MON,TUE,WED,THR,FRI,SAT,SUN
@@ -188,7 +195,7 @@ public enum Week {
 ```java
 Week today;  //열거 변수 선언
 Week today = Week.SUN;  //열거 변수에 상수 저장
-```java
+```
 - 열거형 메소드
   + valueOf() : 인자는 주로 문자열과 동일한 문자열을 열거 객체에서 가져옴
 ```java
@@ -202,4 +209,5 @@ for(Week today : Week.valus())  {
    System.out.println(today.name()+"의 순서는 "+today.ordinal());
 }
 ```
+)
 
