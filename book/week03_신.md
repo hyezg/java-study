@@ -180,26 +180,26 @@ int i[][] = new int[2][5];  //
   + ex) list.remove(0);  //1번째 요소 삭제
 ## ch08. 참조 자료형에 대해서 알아봅시다.
 - 열거 : 한정된 값만을 갖는 자료형. 주로 상수들의 묶음으로 쓰임
-```
-publi enum Week {
+```java
+public enum Week {
   MON,TUE,WED,THR,FRI,SAT,SUN
 }
 ```
-```
+```java
 Week today;  //열거 변수 선언
 Week today = Week.SUN;  //열거 변수에 상수 저장
 ```java
 - 열거형 메소드
   + valueOf() : 인자는 주로 문자열과 동일한 문자열을 열거 객체에서 가져옴
-    ```java
-    Week today = Week.valueOf("SUN");
-    ```
+```java
+Week today = Week.valueOf("SUN");
+```
   + values() : 열거형의 모든 열거 객체들을 배열로 만들어 리턴함.
   + name() : 열거 객체가 가지고 있는 문자열을 리턴함.
   + ordinal() : 전체 열거 객체 중 몇 번째 열거 객체인지 알려줌.
-  ```java
-  for(Week today : Week.valus())  {
-    System.out.println(today.name()+"의 순서는 "+today.ordinal());
-  }
-  ```
+```java
+for(Week today : Week.valus())  {
+   System.out.println(today.name()+"의 순서는 "+today.ordinal());
+}
+```
 
