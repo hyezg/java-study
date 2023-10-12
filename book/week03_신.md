@@ -81,16 +81,19 @@ default:
 ```
 
 ### Q) i = a>b? a-b:b-a;를 if-else 문으로 바꾸면?
--> if(a>b)
-i= a-b;
+-> 
+```java
+if(a>b)
+  i= a-b;
 else
-i = b-a;
-
-### Q) default문은 생략가능하다(o,x)
+  i = b-a;
+```
+### Q) switch문에서 default문은 생략가능하다(o,x)
 ->o
 
-### Q) switch문에서 case문의 값은 어떤 리터럴을 허용하나?(3개) 
--> 정수리터럴,문자리터럴,문자열리터럴 ( case문에는 변수(a)나 식(a>3) X )
+### Q) switch문에서 case문의 값에 올 수 없는것은? 
+-> 불가능 : 변수,식  (변수(a)나 식(a>3) X )
+  가능한것 : 정수리터럴,문자리터럴,문자열리터럴
 
 
 
@@ -105,25 +108,25 @@ int intArray [];
 ```
 ( int(배열타입)  intArray(배열에 대한 레퍼런스 변수) [](배열선언) )  <p>
 2. 배열 생성
-```
+```java
 intArray = new int [5]
 ```
 ( intArray(배열에 대한 레퍼런스 변수) new(배열 생성) int(타입) 5(원소개수) )
 
 - 레퍼런스 변수 : 배열에 대한 주소값을 가지는 변수( 레퍼런스:배열의 주소 )
 - 배열 선언 :
-```
+```java
 int intArray[];
 int [] intArray;
 ```
   + 주의 사항 : 배열 선언시 []에 크기를 지정하면 안됨!!
 - 배열 생성 : new 연산자 이용.
-```
+```java
 intArray = new int[5];
 int intArray[] = new int[5]; //선언과 동시에 생성
 ```
 - 배열 초기화
-```
+```java
 int intArray[] = {4,3,2,1,0};
 ```
 
@@ -140,7 +143,7 @@ int size = intArray.length;
 ```
 
 - for-each문 : 
-```
+```java
 int [] num = {1,2,3,4,5};
 int sum=0;
 for(int k : num)  //num이 배열자리, k는 n[0], n[1]...n[4]로 반복
@@ -148,22 +151,22 @@ for(int k : num)  //num이 배열자리, k는 n[0], n[1]...n[4]로 반복
 Systerm.out.println("합은 "+sum);  //합은 15
 ```
 - 2차원 배열 선언
-```
+```java
 int intArray[][];   //방법1
 char charArray[][];
 int[][] intArray;  //방법2
 ```
 - 2차원 배열 생성
-```
+```java
 intArray = new int[2][5];  //방법1
 int intArray[][] = new int[2][5];  //방법2
 ```
 - 2차원 배열 선언, 생성, 초기화
-```
+```java
 int intArray[][] = {{0,1,2},{3,4,5},{6,7,8}};
 ```
 ### Q) 2차원 배열의 length
-```
+```java
 int i[][] = new int[2][5];  //배열
 ```
 - i.length 몇일까? ->2차원 배열의 행의 개수로서 2
@@ -178,15 +181,18 @@ int i[][] = new int[2][5];  //배열
   + ex) list.add("철수");
   + ex) String name = list.get(0);
   + ex) list.remove(0);  //1번째 요소 삭제
+
 ## ch08. 참조 자료형에 대해서 알아봅시다.
 - 대표적인 참고자료형 : String클래스,인터페이스(Interface),배열(Array),열거(Enumeration)
     - 특징 : 기본값이 없어 null이 존재함.
     - stact메모리에 주소값이 저장되고, heap메모리에 실제 값이 저장됨.
     - 배열의 범위를 벗어나거나 null인 참조변수의 멤버를 호출하는 등의 행위에서 런타임 에러가 발생함.
-      (런타임에러 : 컴파일이 끝난 후 실행 도중에 발생하는 에러/ 컴파일 에러 : 실행전에 발생하는 에러) 
+      (런타임에러 : 컴파일이 끝난 후 실행 도중에 발생하는 에러/ 컴파일 에러 : 실행전에 발생하는 에러)
+      
 ### Q) 기본 자료형과 참조자료형의 차이점은? 
--> 기본자료형은 기본값이 있고 stact 메모리에 실제 값이 저장됨
-- 열거 : 한정된 값만을 갖는 자료형. 주로 상수들의 묶음으로 쓰임  <p>
+-> 기본자료형은 기본값이 있고 stack 메모리에 실제 값이 저장됨<p>
+
+- 열거 : 한정된 값만을 갖는 자료형. 주로 상수들의 묶음으로 쓰임  
 ```java
 public enum Week {
   MON,TUE,WED,THR,FRI,SAT,SUN
@@ -209,5 +215,5 @@ for(Week today : Week.valus())  {
    System.out.println(today.name()+"의 순서는 "+today.ordinal());
 }
 ```
-)
+
 
