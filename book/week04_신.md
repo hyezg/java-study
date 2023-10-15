@@ -25,9 +25,9 @@
 
 - Object 클래스
   - 특징 : java.lang 패키지에 포함됨, 모든클래스의 슈퍼 클래스-모든 클래스에 강제 상속, 모든 객체가 공통으로 가지는 객체의 속성을 나타내는 메소드 보유함
+
 ##### Q) java.lang 패키지에 포함된 대표적인 클래스는 ? 
--> Object 클래스
-<p>  
+-> Object 클래스 <p>
 - 주요 메소드 :
 ```java
 boolean equals(Object obj); //obj가 가리키는 객체와 현재 객체를 비교하여 같으면 true리턴함.
@@ -48,16 +48,15 @@ for(int i=0; i<c.length; i++)    {   //c.length = 5
 
 for(int i=0; i<c.length; i++)    //배열에 있는 모든 Circle객체의 면적 출력
     System.out.println((int)c[i].getArea()+" ");
-```
-<p>
+```  
 #### - 접근 제어자(접근 지정자) : private, portected, public, 디폴트(접근지정자 생략)
     - 목적 : 클래스나 일부 멤버를 공개하여 다른 클래스에서 접근하도록 허용한하기 위해서.
             객체 지향 언어의 캡슐화 정책은 멤버를 보호하는 것
 ##### - 공개 범위 : private < 디폴트 < protected < public
       완벽 차단 | 동일 패키지 허용 | 동일 패키지,자식클래스에 허용 | 모든 클래스에 허용
 ##### Q) 접근 제어자의 공개 범위가 작은순서대로 쓰세요.
--> private < 디폴트 < protected < public
-<p>
+-> private < 디폴트 < protected < public <p>
+
 - 클래스 접근 지정
     - 다른 클래스에서 사용O,X 허용 지정
     - public 클래스 : 다른 모든 클래스에게 접근 허용
@@ -69,8 +68,8 @@ for(int i=0; i<c.length; i++)    //배열에 있는 모든 Circle객체의 면�
     + 디폴트 멤버 : 같은 패키지 내의 다른 클래스에게 접근 허용.
 
 ##### Q) 디폴트 클래스는 다른 패키지의 클래스를 허용한다.(o,x)
--> X
-<p>
+-> X <p>
+
 - static 멤버와 non-static 멤버
 - non-static 멤버의 특성 : ( = 인스턴스 멤버)
     - 공간적 특성 : 멤버들은 객체마다 독립적으로 별도 존재 , 인스턴스 멤버라고도 부름.
@@ -107,7 +106,7 @@ public class Student extends Person {}    //Person을 상속받는 클래스 Stu
     - 클래스의 다중 상속X
     - 상속 횟수 무제한
     - 상속의 최상위 조상 클래스는 java.lang.Object클래스
-##### Q) 상속의 최상위 조상 클래스는 뭘까?
+##### Q) 상속의 최상위 조상 클래스는 무엇?
 -> java.lang.Object 클래스
 
 - 상속에서의 접근지정자 4개
@@ -123,6 +122,9 @@ public class Student extends Person {}    //Person을 상속받는 클래스 Stu
     - 서브클래스 생성자 작성 원칙 : 서브클래스 생성자에서 슈퍼클래스 생성자 하나 선택
     - 서브클래스에서 슈퍼클래스의 생성자를 선택X 경우 : 컴파일러가 자동으로 슈퍼클래스의 기본 생성자 선택
     - 서브클래스에서 슈퍼클래스의 생성자를 선택할 때 : super() 이용
-  - super() : 서브클래스에서 명시적으로 슈퍼클래스의 생성자 선택 호출
+  - super() : 서브클래스에서 명시적으로 슈퍼클래스의 생성자 선택 호출 -> super(parameter);
+*서브클래스 생성자 코드의 제일 첫 라인에 와야함.
+
+
   
 ## ch11. 모든 클래스의 부모 클래스는 Object에요
