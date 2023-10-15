@@ -37,14 +37,32 @@ void wait(); // 다른 스레드가 깨울 때까지 현재 스레드를 대기�
 ```
 ### 객체 배열
 ```java
-Circle [] c;
-c = new Circle[5];
-for(int i=0; i<c.length; i++)    {
-    c[i] = new Circle(i);
+Circle [] c;    //Circle배열에 대한 레퍼런스 변수 c 선언
+c = new Circle[5];    // 레퍼런스 배열 생성
+for(int i=0; i<c.length; i++)    {   //c.length = 5
+    c[i] = new Circle(i);    //배열의 각 원소 객체 생성
 }
+
+for(int i=0; i<c.length; i++)    //배열에 있는 모든 Circle객체의 면적 출력
+    System.out.println((int)c[i].getArea()+" ");
 ```
-- 접근 제어자 
+
+
+#### - 접근 제어자(접근 지정자) : private, portected, public, 디폴트(접근지정자 생략)
+    - 목적 : 클래스나 일부 멤버를 공개하여 다른 클래스에서 접근하도록 허용한하기 위해서.
+            객체 지향 언어의 캡슐화 정책은 멤버를 보호하는 것
+### - 공개 범위 : private < 디폴트 < protected < public
+      완벽 차단 | 동일 패키지 허용 | 동일 패키지,자식클래스에 허용 | 모든 클래스에 허용
+- 클래스 접근 지정
+    - 다른 클래스에서 사용O,X 허용 지정
+    - public 클래스 : 다른 모든 클래스에게 접근 허용
+    - 디폴트 클래스 : (=package-private) 같은 패키지의 클래스에만 허용(다른 패키지 X)
+- 멤버 접근 지정
+    + public 멤버 :  모든 클래스 허용.
+    + private 멤버 : 동일 클래스 내에만 허용, 상속받은 서브 클래스에서 접근 불가.
+    + protected 멤버 : 같은 패키지내의 다른 모든 클래스에게 허용.
+    + 디폴트 멤버 : 같은 패키지 내의 다른 클래스에게 접근 허용.
 ## ch10. 자바는 상속이라는 것이 있어요
 
 
-## ch11. 모든 클래스의 부모 클래스는 Objext에요
+## ch11. 모든 클래스의 부모 클래스는 Object에요
