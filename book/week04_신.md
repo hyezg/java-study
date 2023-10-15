@@ -25,7 +25,7 @@
 
 - Object 클래스
   - 특징 : java.lang 패키지에 포함됨, 모든클래스의 슈퍼 클래스-모든 클래스에 강제 상속, 모든 객체가 공통으로 가지는 객체의 속성을 나타내는 메소드 보유함
-  - 주요 메소드 :  :
+  - 주요 메소드 : 
 ```java
 boolean equals(Object obj); //obj가 가리키는 객체와 현재 객체를 비교하여 같으면 true리턴함.
 Class getClass(); // 현 객체의 런타임 클래스를 리턴
@@ -34,7 +34,16 @@ String toString(); // 현 객쳉에 대한 문자열 표현을 리턴
 void notify(); // 현 객체에 대해 대기하고 있는 하나의 스레드를 깨움
 void notifyAll(); // 현 객체에 대해 대기하고 있는 모든 스레드를 깨움
 void wait(); // 다른 스레드가 깨울 때까지 현재 스레드를 대기하게 함
-``` 
+```
+### 객체 배열
+```java
+Circle [] c;
+c = new Circle[5];
+for(int i=0; i<c.length; i++)    {
+    c[i] = new Circle(i);
+}
+```
+- 접근 제어자 
 ## ch10. 자바는 상속이라는 것이 있어요
 
 
