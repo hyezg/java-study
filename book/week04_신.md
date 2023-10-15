@@ -75,7 +75,15 @@ for(int i=0; i<c.length; i++)    //배열에 있는 모든 Circle객체의 면�
         - 공간적 특성 : static 멤버들은 클래스 당 하나만 생성.
         - 시간적 특성 : static 멤버들은 클래스가 로딩될 때 공간 할당.
         - 공유의 특성 : static 멤버들은 동일한 클래스의 모든 객체에 의해 공유.
-- 
+```java
+class StaticSample {
+    int n;    //non-static 필드
+    void g()    {}    //non-static 메서드
+    static int m;    //static 필드
+    static void f()    {}    //static 메서드
+}
+```
+<p>
 ## ch10. 자바는 상속이라는 것이 있어요
 
 
