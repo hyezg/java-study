@@ -38,6 +38,14 @@ void notify(); // 현 객체에 대해 대기하고 있는 하나의 스레드�
 void notifyAll(); // 현 객체에 대해 대기하고 있는 모든 스레드를 깨움
 void wait(); // 다른 스레드가 깨울 때까지 현재 스레드를 대기하게 함
 ```
+- StringBuffer 클래스 : 가변크기의 문자열 저장 클래스.
+    - Java.lang.StringBuffer
+    - String 클래스와 달리 문자열 변경 가능
+    - StringBuffer 객체의 크기는 스트링 길이에 따라 가변적
+    - 생성 : StringBuffer sb = new StringBuffer("java);
+    - 주요 메소드 : StringBuffer append(String str) : str스트링을 스트링 버퍼에 덧붙임.
+- Calendar 클래스 : java.util 패키지, 시간과 날짜 정보 저장 관리
+    - 생성 : Calendar d = Calendar.getInstnace();
 #### - 객체 배열
 ```java
 Circle [] c;    //Circle배열에 대한 레퍼런스 변수 c 선언
@@ -71,16 +79,22 @@ for(int i=0; i<c.length; i++)    //배열에 있는 모든 Circle객체의 면�
 -> X <p>
 
 - static 멤버와 non-static 멤버
-- non-static 멤버의 특성 : ( = 인스턴스 멤버)
+- non-static 멤버의 특성(= 인스턴스 멤버) :
     - 공간적 특성 : 멤버들은 객체마다 독립적으로 별도 존재 , 인스턴스 멤버라고도 부름.
     - 시간적 특성 : 필드와 메소드는 객체 생성 후 비로소 사용 가능.
     - 비공유 특성 : 멤버들은 다른 객체에 의해 공유되지 않고 베타적.<p>
-- static 멤버 :( = 클래스 멤버)
+- static 멤버(= 클래스 멤버,정적 멤버) :
     - 객체마다 생기는것 X, 클래스당 하나만 생성됨, 객체를 생성하지 않고 사용가능.
     - 특성 :
         - 공간적 특성 : static 멤버들은 클래스 당 하나만 생성.
         - 시간적 특성 : static 멤버들은 클래스가 로딩될 때 공간 할당.
         - 공유의 특성 : static 멤버들은 동일한 클래스의 모든 객체에 의해 공유.
+- 정적 변수 : 모든 객체에 공통인 변수. 하나의 클래스에 하나만 존재함.
+- 정적 메소드(static ~) : ex) public static int getCount() {}
+    - 정적메소드 제약조건 : this사용 불가(객체 없이 사용가능하기때문)
+##### Q) 정적메소드에서 this를 사용할 수 없는 이유는? 
+-> 객체 없이 사용가능하기때문. <p>
+
 ```java
 class StaticSample {
     int n;    //non-static 필드
@@ -89,6 +103,9 @@ class StaticSample {
     static void f()    {}    //static 메서드
 }
 ```
+- final 필드 : 상수 선언할 때 사용. ex) public static final double PI=3.14;
+    - 선언 시 초기값을 지정해야함.
+    - 실행 중에 값 변경X
 <p>
 
 ## ch10. 자바는 상속이라는 것이 있어요
@@ -131,5 +148,22 @@ public class Student extends Person {}    //Person을 상속받는 클래스 Stu
                   상속을 통해 '하나의 인터펭이스(같은 이름)에 서로 다른 내용 구현' 이란 객체 지향의 다형성 실현.
 - 동적 바인딩 : 실행할 메소드를 실행 시에 결정. 오버라이딩메소드가 항상 호출.
 #### 동적바인딩 이해하기,,
-  
+
+- 메소드 재정의(오버라이딩) : 자식클래스가 상속된 부모클래스의 메소드를 다시 정의 하는 것.
+- 
 ## ch11. 모든 클래스의 부모 클래스는 Object에요
+- Object 클래스
+  - 특징 : java.lang 패키지에 포함됨, 모든클래스의 슈퍼 클래스-모든 클래스에 강제 상속, 모든 객체가 공통으로 가지는 객체의 속성을 나타내는 메소드 보유함
+
+##### Q) java.lang 패키지에 포함된 대표적인 클래스는 ? 
+-> Object 클래스 <p>
+- 주요 메소드 :
+```java
+boolean equals(Object obj); //obj가 가리키는 객체와 현재 객체를 비교하여 같으면 true리턴함.
+Class getClass(); // 현 객체의 런타임 클래스를 리턴
+int hashCode(); //현 객체에 대한 해시 코드 값 리턴
+String toString(); // 현 객쳉에 대한 문자열 표현을 리턴
+void notify(); // 현 객체에 대해 대기하고 있는 하나의 스레드를 깨움
+void notifyAll(); // 현 객체에 대해 대기하고 있는 모든 스레드를 깨움
+void wait(); // 다른 스레드가 깨울 때까지 현재 스레드를 대기하게 함
+```
