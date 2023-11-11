@@ -144,7 +144,7 @@ class OuterClass {
 - 정적 중첩 클래스와 내부 클래스 비교 :
   + 공통점 : 클래스 안에 선언된 클래스임.
   + 차이점 : 내부 클래스는 외부 클래스의 모든 멤버에 접근할 수 O (private 포함).
-(링크 참조 : https://limdevbasic.tistory.com/28)
+<p>(링크 참조 : https://limdevbasic.tistory.com/28)
 
 
 ##  ch17. 어노테이션이라는 것도 알아야 한다
