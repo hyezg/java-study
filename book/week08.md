@@ -172,21 +172,21 @@ class OuterClass {
 - @Override : 선언한 메서드가 오버라이드 되었다는 것으 나타냄.
   + 메소드 이름 잘못 적는 실수 방지해줌
 - @Deprecated : 해당 메서드가 더 이상 사용되지 않음을 나타냄.(취소선이 표시됨)
-- @SuppressWarnings : 선언한 곳의 컴파일 경고를 무시해서 경고 안.
-- 
+- @SuppressWarnings : 선언한 곳의 컴파일 경고를 무시해서 경고 안함.<p>
+
 #### - 어노테이션을 선언하기 위한 메타 어노테이션
-- 메타 어노테이션 : 어노테이션을 위한 어노테이션
+##### - 메타 어노테이션 : 어노테이션을 위한 어노테이션
 - 종류 :
-+ ElementType.PACKAGE : 패키지 선언
-+ ElementType.TYPE : 타입 선언
-+ ElementType.ANNOTATION_TYPE : 어노테이션 타입 선언
-+ ElementType.CONSTRUCTOR : 생성자 선언
-+ ElementType.FIELD : 멤버 변수 선언
-+ ElementType.LOCAL_VARIABLE : 지역 변수 선언
-+ ElementType.METHOD : 메서드 선언
-+ ElementType.PARAMETER : 전달인자 선언
-+ ElementType.TYPE_PARAMETER : 전달인자 타입 선언
-+ ElementType.TYPE_USE : 타입 선언<p>
+	+ ElementType.PACKAGE : 패키지 선언
+	+ ElementType.TYPE : 타입 선언
+	+ ElementType.ANNOTATION_TYPE : 어노테이션 타입 선언
+	+ ElementType.CONSTRUCTOR : 생성자 선언
+	+ ElementType.FIELD : 멤버 변수 선언
+	+ ElementType.LOCAL_VARIABLE : 지역 변수 선언
+	+ ElementType.METHOD : 메서드 선언
+	+ ElementType.PARAMETER : 전달인자 선언
+	+ ElementType.TYPE_PARAMETER : 전달인자 타입 선언
+	+ ElementType.TYPE_USE : 타입 선언<p>
 
 #### - 어노테이션을 선언해 보자
 ```java
