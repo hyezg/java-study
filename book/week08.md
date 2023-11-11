@@ -148,15 +148,58 @@ class OuterClass {
 <p>
 
 ##  ch17. 어노테이션이라는 것도 알아야 한다
-- 어노테이션이란?
+#### - 어노테이션이란?
+- 어노테이션 Annotation : 자바 소스 코드에 추가하여 사용할 수 있는 메타데이터의 일종. 보통@를 붙여서 사용함.
+ + 클래스 파일에 임베디드되어 컴파일러에 의해 생성된 후 JVM에 포함되어 작동함.
+ + 메소드,필드,클래스의 윗라인에 작성하여 사용
+- 종류 : 표준(내장) 어노테이션/ 메타 어노테이션/ 사용자 정의 어노테이션 <p>
+- 규칙 :
+  + 요소의 타입은 기본형, String, enum, 어노테이션, Class만 허용함.
+  + 괄호 ( ) 안에 매개변수를 선언할 수 X.
+  + 예외를 선언할 수X.
+  + 요소의 타입을 매개변수로 정의할 수 X.
+```java
+@interface AnnoConfigTest{
+    int id = 100; // 상수 ok
+    String major(int i, int j) //매개변수를 괄호 안에 선언할 수 없다
+    String minor() throws Exception; // 예외는 선언할 수 없다
+    ArrayList<T> list(); // 요소의 타입을 매개변수로 정의할 수 없다
+```[출처] https://blog.naver.com/youbeen2798/222860971321)
+<p>
+  
+#### - 미리 정해져 있는 어노테이션들은 딱 3개뿐
+- @Override : 선언한 메서드가 오버라이드 되었다는 것으 나타냄.
+  + 메소드 이름 잘못 적는 실수 방지해줌
+- @Deprecated : 해당 메서드가 더 이상 사용되지 않음을 나타냄.(취소선이 표시됨)
+- @SuppressWarnings : 선언한 곳의 컴파일 경고를 무시해서 경고 안.
 - 
-- 미리 정해져 있는 어노테이션들은 딱 3개뿐
-- 
-- 어노테이션을 선언하기 위한 메타 어노테이션
-- 
-- 어노테이션을 선언해 보자
-- 
-- 어노테이션에 선언한 값은 어떻게 확인하지?
-- 
-- 어노테이션도 상속이 안돼요
-- 
+#### - 어노테이션을 선언하기 위한 메타 어노테이션
+- 메타 어노테이션 : 어노테이션을 위한 어노테이션
+- 종류 :
++ ElementType.PACKAGE : 패키지 선언
++ ElementType.TYPE : 타입 선언
++ ElementType.ANNOTATION_TYPE : 어노테이션 타입 선언
++ ElementType.CONSTRUCTOR : 생성자 선언
++ ElementType.FIELD : 멤버 변수 선언
++ ElementType.LOCAL_VARIABLE : 지역 변수 선언
++ ElementType.METHOD : 메서드 선언
++ ElementType.PARAMETER : 전달인자 선언
++ ElementType.TYPE_PARAMETER : 전달인자 타입 선언
++ ElementType.TYPE_USE : 타입 선언
+#### - 어노테이션을 선언해 보자
+```java
+@interface 이름{
+	타입 요소 이름(); // 어노테이션의 요소를 선언
+	    ...
+}
+@interface DateTime{
+	String yymmdd();
+    String hhmmss();
+}
+```
+- 요소 특징 : 적용할 때 값을 지정하지 않으면 사용될 기본 값을 지정할 수 있음.
+  + 이름이 value일때 요소 이름 생략가능함
+#### - 어노테이션에 선언한 값은 어떻게 확인하지?
+#### - 어노테이션도 상속이 안돼요
+- Annotation은 모든 어노테이션의 조상이지만 상속은 불가능함.
+- @Inherited : 어노테이션의 상속을 가능하게
