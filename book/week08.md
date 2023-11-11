@@ -164,7 +164,8 @@ class OuterClass {
     String major(int i, int j) //매개변수를 괄호 안에 선언할 수 없다
     String minor() throws Exception; // 예외는 선언할 수 없다
     ArrayList<T> list(); // 요소의 타입을 매개변수로 정의할 수 없다
-```[출처] https://blog.naver.com/youbeen2798/222860971321)
+```
+[출처] https://blog.naver.com/youbeen2798/222860971321)
 <p>
   
 #### - 미리 정해져 있는 어노테이션들은 딱 3개뿐
@@ -185,7 +186,8 @@ class OuterClass {
 + ElementType.METHOD : 메서드 선언
 + ElementType.PARAMETER : 전달인자 선언
 + ElementType.TYPE_PARAMETER : 전달인자 타입 선언
-+ ElementType.TYPE_USE : 타입 선언
++ ElementType.TYPE_USE : 타입 선언<p>
+
 #### - 어노테이션을 선언해 보자
 ```java
 @interface 이름{
@@ -198,7 +200,8 @@ class OuterClass {
 }
 ```
 - 요소 특징 : 적용할 때 값을 지정하지 않으면 사용될 기본 값을 지정할 수 있음.
-  + 이름이 value일때 요소 이름 생략가능함
+  + 이름이 value일때 요소 이름 생략가능함<p>
+
 #### - 어노테이션에 선언한 값은 어떻게 확인하지?
 #### - 어노테이션도 상속이 안돼요
 - Annotation은 모든 어노테이션의 조상이지만 상속은 불가능함.
