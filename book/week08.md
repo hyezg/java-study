@@ -33,13 +33,81 @@ class OuterClass {
         innerClass.Test();
     }
 }
+public class Main {
+    public static void main(String[] args) {
+        OuterClass outer = new OuterClass();
+
+        outer.testClass();
+    }
+}
 출처: https://ittrue.tistory.com/123 [IT is True:티스토리]
 ```
 - 정적 내부 클래스 : 외부 클래스의 멤버 변수 선언위치에 선언해야하며, 외부 전역 변수만을 사용할 수 있음.
-  
-  
-- 지역 내부 클래스 : 외부 클래스의 메서드나 초기화 블럭 안에 선언함, 외부 인스턴스 변수와 외부 전역 변수를 사용할 수 있음.
-  
+  + 내부 클래스가 외부 클래스의 존재와 무관하게 정적 변수를 사용할 수 O.
+```java
+class OuterClass {
+    private String str1 = "외부 클래스 인스턴스 변수입니다.";
+    private static String str2 = "외부 클래스 정적 변수입니다.";
+
+    void getPrintInstance() {
+        System.out.println("인스턴스 메서드");
+    }
+
+    static void getPrintStatic() {
+        System.out.println("정적 메서드");
+    }
+
+    static class StaticInnerClass {
+        void test() {
+            System.out.println(str2);
+            getPrintStatic();
+
+            // 인스턴스 변수 및 인스턴스 메서드는 사용 불가
+            // System.out.println(str1);
+            // getPrintInstance();
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        OuterClass.StaticInnerClass innerClass = new OuterClass.StaticInnerClass();
+        innerClass.test();
+    }
+}
+출처: https://ittrue.tistory.com/123 [IT is True:티스토리]
+```
+- 지역 내부 클래스 : 메서드 내에서 정의되는 클래스.
+  + 외부 클래스의 메서드나 초기화 블럭 안에 선언함, 외부 인스턴스 변수와 외부 전역 변수를 사용할 수 있음.
+  + 메서드 내부에서만 사용가능함 -> 메서드 안에서 선언 후 객체 생성해서 사용함.
+```java
+class OuterClass {
+    String str1 = "외부 클래스 인스턴스 변수";
+
+    void test() {
+        String str2 = "지역 변수";
+
+        // 지역 내부 클래스
+        class LocalInnerClass {
+            void getPrint() {
+                System.out.println(str1);
+                System.out.println(str2);
+            }
+        }
+        // 메서드 내에서 객체를 생성 후 사용
+        LocalInnerClass localInnerClass = new LocalInnerClass();
+        localInnerClass.getPrint();
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        OuterClass outer = new OuterClass();
+        outer.test();
+    }
+}
+출처: https://ittrue.tistory.com/123 [IT is True:티스토리]
+```
  
 - 익명 내부 클래스 : 클래스의 선언과 객체의 생성을 동시에 할 수 있는 일회용 익명 클래스로, 외부 인스턴스 변수와 외부 전역변수를 사용할 수 O.
 (** 멤버 내부 클래스 = 인스턴스 내부 클래스 + 정적 내부 클래스)
