@@ -41,8 +41,8 @@ Vector<Integer> v = new Vector<Integer>(5); //백터의 용량 설정하는 법
 
 | 메소드 | 설명 |
 |---| --- | 
-|boolean add(E element) : | 백터의 맨 뒤에 element 추가 |
-|--- | --- |
+|boolean add(E element) | 백터의 맨 뒤에 element 추가 |
+|void add(int index, E element) | 인덱스에 element 삽입 |
 
 
 - 제네릭에 ?가 있는 것은 뭐야?
