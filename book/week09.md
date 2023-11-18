@@ -31,11 +31,14 @@ System.out을 살펴보자
   + K : Key
 - Vector<E> : 배열을 가변크기로 다룰 수 있게 하고, 객체의 삽입, 삭제, 이동이 쉽도록 구성한 컬렉션 클래스.
   + 삽입되는 요소의 개수에 따라 자동으로 크기를 조절하고 요소의 삽입과 삭제에 따라 자동으로 요소들의 자리를 이동함.
-- 백터 생성 : E에 요소로 사용할 타입을 지정해야함.
-
+- 백터 생성 : E에 요소로 사용할 타입을 지정해야함, int/char/double 등의 기본 타입은 E에 사용X.
 ```java
 Vector<Integer> v = new Vector<Integer>;
+Vector<Integer> v = new Vector<Integer>(5); //백터의 용량 설정하는 법
 ```
+- 주요 메소드
++--|--+
+|boolean add(E element) : | 백터의 맨 뒤에 element 추가 |
 
 
 
