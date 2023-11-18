@@ -37,9 +37,11 @@ Vector<Integer> v = new Vector<Integer>;
 Vector<Integer> v = new Vector<Integer>(5); //백터의 용량 설정하는 법
 ```
 - 주요 메소드
-+--|--+
-|boolean add(E element) : | 백터의 맨 뒤에 element 추가 |
 
+
++------|--------+
+|boolean add(E element) : | 백터의 맨 뒤에 element 추가 |
++------|--------+
 
 
 - 제네릭에 ?가 있는 것은 뭐야?
