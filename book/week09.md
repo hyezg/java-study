@@ -32,6 +32,7 @@ System.out을 살펴보자
 - Vector<E> : 배열을 가변크기로 다룰 수 있게 하고, 객체의 삽입, 삭제, 이동이 쉽도록 구성한 컬렉션 클래스.
   + 삽입되는 요소의 개수에 따라 자동으로 크기를 조절하고 요소의 삽입과 삭제에 따라 자동으로 요소들의 자리를 이동함.
 - 백터 생성 : E에 요소로 사용할 타입을 지정해야함, int/char/double 등의 기본 타입은 E에 사용X.
+  + null 삽입 할 수 O.
 ```java
 Vector<Integer> v = new Vector<Integer>;
 Vector<Integer> v = new Vector<Integer>(5); //백터의 용량 설정하는 법
@@ -45,9 +46,16 @@ Vector<Integer> v = new Vector<Integer>(5); //백터의 용량 설정하는 법
 | void add(int index, E element) | 인덱스에 요소 삽입 |
 | int capacity() | 벡터의 현재 용량 리턴 | 
 | void clear() | 벡터의 모든 요소 삭제 |
+| E get(int index) | 인덱스의 요소 리턴 |
 | E remove(int index) | 인덱스의 요소 리턴 |
 | int size() | 벡터가 포함하는 요소의 개수 리턴 |
 
+- 요소 삽입
+```java
+v.add(Integer.valueOf(5));
+v.add(5);          //자동 박싱됨
+v.add(2,5);   
+```
 
 - 제네릭에 ?가 있는 것은 뭐야?
 - 제네릭 선언에 사용하는 타입의 범위도 지정할 수 있다
