@@ -76,8 +76,42 @@ int len = a.size(); // ArrayList에 들어있는 요소의 개수
 a.remove(1); // 인덱스 1의 위치의 요소 삭제함
 ```
 ##### <Stack 클래스는 뭐가 다른데?>
-
-
+- stack : 데이터를 순서대로 쌓는 자료구조. 후입선출 구조(LIFO : Last in First Out)
+- 특징 : 단방향 입출력 구조(한쪽에서 들어옴)
+ + 깊이 우선 탐색(DFS)에 이용됨
+ + 재귀 함수의 동작 흐름과 같은 구조를 가짐
+ + 공격을 받으면 스택 메모리 영역에서함(?)
+- 선언
+-
+```java
+//선
+import java.util.Stack; //import
+Stack<Integer> stack1 = new Stack<>();
+//값 추가
+stackInt.push(1); 
+stackInt.push(2);
+stackInt.push(3);
+// 값 제거
+stackInt.pop(); 
+stackInt.pop();
+stackInt.pop(); //3,2,1 순으로 값 제거
+//값 추가
+stackInt.push(1); // 1,2,3 순으로 값 추가
+stackInt.clear(); //값 모두 제거 (메서드 반환 값X)
+```
+- peek() : 스택의 마지막 요소를 반환함. (스택에 변화안줌), 스택이 비어있을 경우 peek()호출 시 예외 발생함
+- pop() : 스택의 마지막 요소 제거함과 동시에 해당 값 반환함.
+- empty() : 스택이 비어있는지의 여뷰를 반환함. 비어있을 경우 true, 비어있지 않을 경우 false
+- search() : 메서드의 인자를 스택에서 검색하여 해당 위치를 반환함. 해당 인자가 여러 개일 경우 마지막 위치를 반환함.
+  (위치:빠져나오는순서, 거꾸로 생각해야)
+```java
+stackInt.peek();
+stackInt.pop();
+stackInt.isEmpty();
+stackInt.search(2); // 뒤에서 두번째
+stack.size();     // 크기 출력
+stack.contains(1) // 스택에 1검색 후 있다면 true, search와 비슷
+```
 
 ## ch06. 자바랭 다음으로 많이 쓰는 얘들은 컬렉션-Part-1(Set,Queue)
 ##### <Set이 왜 필요하지?>
