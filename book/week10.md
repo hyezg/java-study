@@ -115,15 +115,66 @@ stack.contains(1) // 스택에 1검색 후 있다면 true, search와 비슷
 
 ## ch06. 자바랭 다음으로 많이 쓰는 얘들은 컬렉션-Part-1(Set,Queue)
 ##### <Set이 왜 필요하지?>
+- set : HashSet: 중복x 순서x, TreeSet: 오름차순으로 데이터 정렬함, LinkeddHashSet : 중복X, 입력한 순서대로 저장함
+- 특징 :
+  + 중복 저장 허용X, 하나의 null값만 저장가능.
+  + 순서없음(HashSet은 순서 바뀔 수도 O)
+  + 빠른 액세스 시간
+  + 인터페이스로 직접 생성해서 사용X. 클래스로 구현해서 사용해야
+  + Indexing 없음 : Array,List같은 인덱싱 제공안함. 인덱스 없다는뜻거의
+  + primitive type 없음 : set은 객체만 저장하고 primitive type은 저장안함. (Integer,String 등 클래스 사용해야함, int 안됨)
 
 ##### <HashSet에 대해서 파헤쳐 보자>
+- HashSet : 데이터 중복할 수 x, 순서 보장X, null허용
+- 
+
+```java
+Set<String> color = new HashSet<>();
+set.add("red");
+System.out.println(color); // 순서없이 요소 출력
+```
 
 ##### <HashSet의 생성자들도 여러 종류가 있다>
 
 ##### <HashSet의 주요 메소드를 살펴보자>
+```java
+color.add("yellow"); // 내부에  "yellow "값이 존재하지 않는다면 그값을 추가하고 true 반환함 존재하면 false 반환함
+color.size(); //
+//요소 값 삭제
+color.remove(2); //
+color.clear(); //
+//요소 값 검색
+color.contains("red");
+//요소 값 출력
+System.out.println(color);	// 출력 : ["yellow","red"]
+Iterate iter = color.iterator() ;
+While(iter.hashNext()) {	//hashNext() : 가져올 객체가 있다면 true 없다면 false 리턴
+	System.out.println(iter.next()); // 출력 : yellow,red 
+}
+```
+
 
 ##### <Queue의 주요 메소드를 살펴보자>
-
+- Queue : 선입 선출(FIFO:First In First Out)
+```java
+import java.util.Queue; //선언
+Queue<Integer> q = new LinkedList<>();
+// 삽입
+q.add(2); //삽입 성공시 true, 아니면 Exception 발생
+q.offer(1); // 삽입 성공시 true 아니면 false
+q.poll(); // 삭제된 value 공백 큐면 null 반환
+//value 반환
+q.element(); // 큐 head에 위치한 value, 공백 큐면 예외 발생
+q.peek(); // 큐 head에 위치한 value, 공백 큐면 null 반환
+//큐 초기화
+q.clear(); // 반환값 X.
+//큐 크기
+q.size();
+//원소 찾기
+q.contains(value); //있으면 true 없으면 false
+//공백 큐인가?
+q/isEmpty(); //맞으면 true, 아니면 false
+```  
 ##### <LinkedList를 파헤쳐보자>
 
 ##### <LinkedList의 생성자와 주요 메소드를 살펴보자>
