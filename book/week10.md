@@ -174,7 +174,28 @@ q.size();
 q.contains(value); //있으면 true 없으면 false
 //공백 큐인가?
 q/isEmpty(); //맞으면 true, 아니면 false
-```  
-##### <LinkedList를 파헤쳐보자>
+```
 
+
+##### <LinkedList를 파헤쳐보자>
+- LinkedList : ArrayList와 같이 인덱스로 접근하여 조회함, 삽입 가능하지만 내부 구조는 완전히 다르게 구성됨,
+- LinkedList와 ArrayList 의 차이점 : arraylist는 배열을 이용하여 메서드로 조작하지만 linkedlist는 노드끼리 주소 포인터를 서로 가리키며 링크(참조)함으로써 이어지는 구조/ linkedlist는 초기값을 미리 지정할 수 o.
+- 특징 : 노드=객체, 객체를 만들면 객체의 주소가 생기고, 노드마다 객체의 주소를 서로 참조함으로써 연결 형태를 구성함.
+![image](https://github.com/hyezg/java-study/assets/112006114/77a3aa84-b9ab-445e-9b11-e40b3327fbde)
+- 종류 : 단방향 연결 리스트/ 양방향 연결 리스트 / 양방향 원형 연결 리스트
+- 단방향 연결 리스트 : 다음 노드를 가리키기 위한 포인터 필드 next만을 가지고 있는 링크드 리스트. 현재요소에서 이전 요소로 접근해야할 때 매우 부접합한 특징
+- 양방향 연결 리스트 : 기존의 단일 연결 노드 객체에서 이전 노드 주소를 담고있는 필드가 추가된 형태. 역순으로도 검색 가능함
+- 양방향 원형 연결 리스트 : 첫번째 노드와 마지막 노드를 각각 연결시켜, 마치 원형 리스트 처럼 만든것. 티비채널,오디오플레이어같이 데이터를 순차적 방식으로 처리하는것.
+
+- 
 ##### <LinkedList의 생성자와 주요 메소드를 살펴보자>
+- 생성자 :
+ + LinkedList() : 링크드리스트 객체 생성
+ + LinkedList(Collection c) : 주어진 컬렉션을 포함하는 링크드리스트 객체 생성
+```java
+LinkedList<Integer> list = new LinkedList; // int 타입 
+LinkedList<Integer> list2 = new LinkedList<Integer>(Arrays.asList(1,2)); // 생성시 초기값 설정
+```
+- 초기값 설정 : 내부 데이터 집합 구조가 배열처럼 미리 공간을 할당하고 사용하는 방식이 아니라 데이터가 추가될 때마다 노드(객체)들이 새서되어 동적으로 추가되는 방식이기때문.
+Q) LinkedList와 ArrayList의 차이점?
+A) arraylist는 배열을 이용하여 메서드로 조작하지만 linkedlist는 노드끼리 주소 포인터를 서로 가리키며 링크(참조)함으로써 이어지는 구조/ linkedlist는 초기값을 미리 지정할 수 o.
