@@ -200,13 +200,19 @@ LinkedList<Integer> list2 = new LinkedList<Integer>(Arrays.asList(1,2)); // 생�
 
   
 ##### 퀴즈
-Q) set의 특징은?
+Q) set의 특징은? <br>
 A)
-Q) stack은 너비우선탐색(BFS)이다?
-A) X
-Q) stack에서 stackInt.search(2)는 무엇?
-A) 뒤에서 2번째를 찾는 것
-Q) LinkedList와 ArrayList의 차이점?
-A) arraylist는 배열을 이용하여 메서드로 조작하지만 linkedlist는 노드끼리 주소 포인터를 서로 가리키며 링크(참조)함으로써 이어지는 구조/ linkedlist는 초기값을 미리 지정할 수 o.
-Q) LinkedList는 초기값을 지정할 수 있는데 이유는?
+  + 중복 저장 허용X, 하나의 null값만 저장가능.
+  + 순서없음(HashSet은 순서 바뀔 수도 O)
+  + 빠른 액세스 시간
+  + 인터페이스로 직접 생성해서 사용X. 클래스로 구현해서 사용해야
+  + Indexing 없음 : Array,List같은 인덱싱 제공안함. 인덱스 없다는뜻거의
+  + primitive type 없음 : set은 객체만 저장하고 primitive type은 저장안함. (Integer,String 등 클래스 사용해야함, int 안됨) <br>
+Q) stack은 너비우선탐색(BFS)이다? <br>
+A) X <br>
+Q) stack에서 stackInt.search(2)는 무엇? <br>
+A) 뒤에서 2번째를 찾는 것 <br>
+Q) LinkedList와 ArrayList의 차이점? <br>
+A) arraylist는 배열을 이용하여 메서드로 조작하지만 linkedlist는 노드끼리 주소 포인터를 서로 가리키며 링크(참조)함으로써 이어지는 구조/ linkedlist는 초기값을 미리 지정할 수 o. <br>
+Q) LinkedList는 초기값을 지정할 수 있는데 이유는? <br>
 A)내부 데이터 집합 구조가 배열처럼 미리 공간을 할당하고 사용하는 방식이 아니라 데이터가 추가될 때마다 노드(객체)들이 새서되어 동적으로 추가되는 방식이기때문.
