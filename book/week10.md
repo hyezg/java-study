@@ -207,7 +207,8 @@ A)
   + 빠른 액세스 시간
   + 인터페이스로 직접 생성해서 사용X. 클래스로 구현해서 사용해야
   + Indexing 없음 : Array,List같은 인덱싱 제공안함. 인덱스 없다는뜻거의
-  + primitive type 없음 : set은 객체만 저장하고 primitive type은 저장안함. (Integer,String 등 클래스 사용해야함, int 안됨) <br>
+  + primitive type 없음 : set은 객체만 저장하고 primitive type은 저장안함. (Integer,String 등 클래스 사용해야함, int 안됨)
+
 Q) stack은 너비우선탐색(BFS)이다? <br>
 A) X <br>
 Q) stack에서 stackInt.search(2)는 무엇? <br>
