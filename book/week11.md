@@ -18,11 +18,18 @@ map1.get("a"); //A
 <HashMap 클래스대해서 자세히 살펴보자> <br>
 - HashMap :  키나 값에 null 저장O (Hash Table 방식 사용)
 - key를 index로 변경하여 데이터를 접근
-- 자료구조 :
+- Hash Table 자료구조 :
+![image](https://github.com/hyezg/java-study/assets/112006114/50480992-cc50-433d-85ac-09d4fb704bac)
   + 특정 key는 해시 함수를 통하영 bucket에 접근할 수 있는 index로 변환됨.
   + index를 이용하여 bucket에 접근함.
   + bucket에 맞는 index에 key와 value를 저장함.
-- 
+(ArrList와 LinkeddList는 index를 통해 데이터를 접근한다고 본다면 Hahsh Table은 Key를 index로 변경하여 데이터를 접근함.)
+- key가 해시함수를 통해서 key에 대한 index가 만들어지고 index를 통하여 bucket에 접근하기 때문에 저장되는 데이터가 많을수록, bucket의 크기가 적을 수록 index 충돌이 발생할 가능성이 높음.
+
+  - bucket은 배열 기반 구조임/ 충분히 큰 데이터를 가지고 있을 겨웅, 충돌시 entry의 저장방식을 LinkedList->TreeNode로 변경함.
+  - 장점 : key가 index로 변환되어 bucket에 대응하는 곳에 저장하기 때문에 값을 검색하는 것은 선형적으로 접근하는 ArrayList나 LinkedList 대비 더 빠름 / key를 null 값으로 할 일은 별로 없지만 null key가 가능함.
+  - 단점 : bucket의 크기가 가득 차서 크기 조정이 필요할 경우 더 큰 해시맵으로 변경되기 때문에 지연시간이 걸릴 수 있음/ 데이터를 저장하는데 필요한 메모리보다 더 많은 메모리를 필요로 함/ HashMap에 저장된 key를 추출했을 때, 정렬되지 않음.
+  - 사용용도 : index가 아닌 key를 이용하여 데이터 저장과 접근이 필요할 경우 사용함/ 데이터의 크기가 어느 정도 예상되는 경우 사용함/ 삽입 삭제가 빈번할 경우 사용함.
 <HashMap 객체에 값을 넣고 확인해보자> <br>
 
 <HashMap 객체의 값을 확인하는 다른 방법들을 알아보자> <br>
