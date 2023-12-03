@@ -8,14 +8,21 @@
   + Key에 해당하는 값이 이미 존재하면 값 갱신함.
 - put 메소드 : 
 <Map을 구현한 주요 클래스들을 살펴보자> <br>
-- put() : 
-- get() : 
-- remove() :
+- put(Object key, Object value): key에 해당되는 value객체를 저장
+  putAll(Map m)  <br>
+- value get() : key에 해당되는 value 반환 
+- remove() : key에 해당하는 value 삭제
+- void clear() : map의 모든 객체를 삭제
+- boolean isEmpty() : map이 비어있는지 확인
+- Set keySet() : map에 저장된 모든 값들을 collection으로 반환
+- boolean contatinsKey() : map에 지정된 key가 있는지 boolean으로 반환
+- boolean containsValue() : map에 지정된 value가 있는지 boolean으로 반환
+- int size() : map에 저장된 객쳉의 갯수
 ```java
 map1.put("a","A");
 map1.get("a"); //A
 ```
-<HashMap 클래스대해서 자세히 살펴보자> <br>
+<HashMap 클래스에 대해서 자세히 살펴보자> <br>
 - HashMap :  키나 값에 null 저장O (Hash Table 방식 사용)
 - key를 index로 변경하여 데이터를 접근
 - Hash Table 자료구조 :
@@ -31,9 +38,10 @@ map1.get("a"); //A
   - 단점 : bucket의 크기가 가득 차서 크기 조정이 필요할 경우 더 큰 해시맵으로 변경되기 때문에 지연시간이 걸릴 수 있음/ 데이터를 저장하는데 필요한 메모리보다 더 많은 메모리를 필요로 함/ HashMap에 저장된 key를 추출했을 때, 정렬되지 않음.
   - 사용용도 : index가 아닌 key를 이용하여 데이터 저장과 접근이 필요할 경우 사용함/ 데이터의 크기가 어느 정도 예상되는 경우 사용함/ 삽입 삭제가 빈번할 경우 사용함.
 <HashMap 객체에 값을 넣고 확인해보자> <br>
-
+- 값 넣기 : put()
+- 
 <HashMap 객체의 값을 확인하는 다른 방법들을 알아보자> <br>
-
+- 값 확인 : get()
 <정렬된 키의 목록을 원한다면 TreeMap을 사용하자> <br>
 - TreeMap : Key를 기준응로 정렬하는 것. (숫자 -> 알파벳 대문자 -> 알파벳 소문자 -> 한글)
 - firstKey() :
@@ -42,7 +50,15 @@ map1.get("a"); //A
 - lowerKey() :
 - 
 <Map을 구현한 Properties 클래스는 알아두면 편리하다> <br>
-
+- Properties : hashtable을 상속받아 구현한것으로 (String,String)형태로 저장하는 단순화된 컬렉션클래스. 데이터를 파일로 읽고 쓰는 편리한 기느 제공함
+- 메서드 :
+  + Properties() : 객체 생성
+  + void setProperty(String key, String value) : key에 해당되는 value 객체를 저장
+  + String getProperty(String key) : key에 해당하는 String형 value 반환
+  + Enumeration<Object> keys() : Properties에 저장되있는 모든 key를 enumeration<object>로 반환
+  + Set<Object> keySet() : properties에 저장되어 있는 모든 key를 Set<Object>로 반환
+  + Collection<Object> values() : properties에 저장되어 있는 모든 value를 Collection<Object>로 반환
+ + boolean replace(key, oldValue) : key에 해당하는 value값인 olValue를 newValue로 변환 해당하는 key객체가 있으면 true, 없으면 false
 <자바의 자료구조를 정리해보자>
 
 
