@@ -91,7 +91,23 @@ map1.get("a"); //A
   + - 대표메서드 : add(),size(),iterator()
 - 
 ##### <배열을 쉽게 처리해주는 Arrays> <br>
-
+- arrays : 항목 정렬, 항목 검색, 항목 비교와 같은 메소드를 제공함. 모든 메소드는 static메소드이므로,arrays클래스로 바로 사용 가능함.
+- 기본 타입 또는 String 배열은 사전순(오름차순)으로 정렬할 수 O.
+- 배열 항목 검색 : Arrays.sort()메소드로 정렬한 후 -> 
+          Arrays.binarySearch()메소드로 원하는 항목의 인덱스 값을 찾을 수 O.(없는 항목일 경웅 음수값 리턴)
+- 배열 동일 항목 채우기 : fill()메소드로 가능함
+- 배열 항목 비교 : equals(배열,배열), deepEquals()로 얕은 깊은 비교 가능함.
+- 얕은 복사 : 데이터를 복사하는데 복사 객체는 원본 객체와 같은 메모리 주소를 참조함. 같은 주소의 값을 참조하기때문에 한쪽에 한쪽에 대한 접근이 다른 한쪽에도 영향을 미침.
+- 깊은 복사 : 객체를 복사할 때 해당 객체와 인스턴스 변수까지 복사하여 새 주소에 담음. clone()메소드 사용함 -> Cloneable인터페이스의 추상메소드.
+- copyOf()메소드 :전달받은 배열의 특정 길이만큼 새로운 배열로 복사하여 반환함
+```java
+import java.util.Arrays
+void fill(배열 값)
+void fill(배열, 시작인덱스,끝인덱스,값)
+arr1.equals(arr2);  //배열의 번지 비교
+Arrays.equals(arr1,arr2);  //배열의 1차 항목값만 비교
+Arrays.deepEquals(arr1,arr2); //중첩 배열의 모든 항목값 비교
+```
 ##### <임의의 값을 생성하기 위한 Random> <br>
 - Random 클래스 사용
 ```java
@@ -104,7 +120,7 @@ int value = r.nextInt(10);
 - nextInt(int i) : 0부터 i까지 랜덤한 숫자 리턴함
 - nextInt() : int 타입의 최소~최대범위 안에서 랜덤한 숫자 리턴함
 - nextBoolean() : boolean타입의 true,false 랜덤한 값 리턴함
-- 특징 : 유사 난수가 생서될 수 있
+- 특징 : 유사 난수가 생서될 수 있음
 ##### <문자열을 자르기 위한 String Tokenzior> <br>
 
 ##### <java.math 패키지의 BigDecimal 클래스를 활용하자> <br>
