@@ -50,7 +50,7 @@ map1.get("a"); //A
 - lowerKey() :
 - 
 <Map을 구현한 Properties 클래스는 알아두면 편리하다> <br>
-- Properties : hashtable을 상속받아 구현한것으로 (String,String)형태로 저장하는 단순화된 컬렉션클래스. 데이터를 파일로 읽고 쓰는 편리한 기느 제공함
+- Properties : hashtable을 상속받아 구현한것으로 (String,String)형태로 저장하는 단순화된 컬렉션클래스. 데이터를 파일로 읽고 쓰는 편리한 기 제공함
 - 메서드 :
   + Properties() : 객체 생성
   + void setProperty(String key, String value) : key에 해당되는 value 객체를 저장
@@ -64,9 +64,46 @@ map1.get("a"); //A
 
 ## Ch08. 그 다음으로 많이 쓰는 얘들은 자바 유틸
 <java.lang 다음으로 많이 사ㅛ되는 java.util 패키지> <br>
+- List,Map,Set,Collection 등 클래스들 있음
+- Collection framework : 자료구조 클래스들
+- interface collection interface 중복O,순서 기억 못함
+- add() : 자료 추가해줌
+- iterator(): 자료 하나씩 꺼내기위한 메소드
+- size() : 저장된 자료의 수 반환하는 메소드
+  
+- Set : collection interface를 상속받는 클래스. 중복X,순서X
+- list : 중복O,순서O 저장공간이 필요에 따라 자유롭게 변경
+- Map : key value가지는 자료구조, key는 중복X,순서X
+
+  
 <날짜를 처리하기 위한 Date와 Calender> <br>
-<컬렉션 객체드르이 도우미 Collections> <br>
+- Calndar : 기존 date클래스는 지역화를 지원안함. (지역화 : 국가별로 현재 날짜와 시간을 다를 수 있고 부분 지원하는 것)
+
+<컬렉션 객체들의 도우미 Collections> <br>
+- Collection list,set,collection,map 자료구조 포함함
+- collection 인터페이스 : collection 프레임워크에서 가장 기존이 되는 인터페이스
+  - 중복O,자료 저장 순서 기억X,
+  - iterator를 활용해 찾아냄 
+  - iterator interface :
+    + hashNext() : boolean 반
+    + next() : Object
+  + - 대표메서드 : add(),size(),iterator()
+- 
 <배열을 쉽게 처리해주는 Arrays> <br>
+
 <임의의 값을 생성하기 위한 Random> <br>
+- Random 클래스 사용
+```java
+import java.util.Random;
+Ranodm r = new Random();
+// Random random1 = new Random(4) //seed 지정해서 생성
+int value = r.nextInt(10);
+//int randomValueWithRange = random.nextInt(max - min) + min; // 난수 범위 지정하는 법
+```
+- nextInt(int i) : 0부터 i까지 랜덤한 숫자 리턴함
+- nextInt() : int 타입의 최소~최대범위 안에서 랜덤한 숫자 리턴함
+- nextBoolean() : boolean타입의 true,false 랜덤한 값 리턴함
+- 특징 : 유사 난수가 생서될 수 있
 <문자열을 자르기 위한 String Tokenzior> <br>
+
 <java.math 패키지의 BigDecimal 클래스를 활용하자> <br>
