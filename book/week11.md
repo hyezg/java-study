@@ -60,9 +60,7 @@ map1.get("a"); //A
   + Set<Object> keySet() : properties에 저장되어 있는 모든 key를 Set<Object>로 반환
   + Collection<Object> values() : properties에 저장되어 있는 모든 value를 Collection<Object>로 반환
  + boolean replace(key, oldValue) : key에 해당하는 value값인 olValue를 newValue로 변환 해당하는 key객체가 있으면 true, 없으면 false
-<자바의 자료구조를 정리해보자>
-
-
+<자바의 자료구조를 정리해보자><br>
 
 ## Ch08. 그 다음으로 많이 쓰는 얘들은 자바 유틸
 ##### <java.lang 다음으로 많이 사ㅛ되는 java.util 패키지> <br>
