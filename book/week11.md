@@ -1,5 +1,5 @@
 ## Ch07. 자바랭 다음으로 많이 쓰는 얘들은 컬렉션-Part3 (Map)
-<Map이란?> <br>
+##### <Map이란?> <br>
 - Map 컬렉션 클래스 : Map인터페이스는 구현한 Map컬렉션 클래스들은 키와 값을 하나의 쌍으로 저장하는 방식을 사용함(Map은 인터페이스로 선언되어 있고, Map interface 구현체로는 HashMap,TreeMap,LinkedHashMap)
   키 = 값을 찾기 위한 이름의 역할
 - map : Key와 Value 한쌍으로 이루어진 자료형ㅇ. 리스트나 배열처럼 순차적으로 해당 요소 값을 구하지 않고 key를 통해 value를 얻음.
@@ -22,7 +22,7 @@
 map1.put("a","A");
 map1.get("a"); //A
 ```
-<HashMap 클래스에 대해서 자세히 살펴보자> <br>
+##### <HashMap 클래스에 대해서 자세히 살펴보자> <br>
 - HashMap :  키나 값에 null 저장O (Hash Table 방식 사용)
 - key를 index로 변경하여 데이터를 접근
 - Hash Table 자료구조 :
