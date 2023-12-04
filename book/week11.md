@@ -6,6 +6,10 @@
 - 특징 : 요소의 저장 순서를 유지하지 않음.
   + key: 중복 허용X 고유한값O (키를 통해 값을 얻어내기 때문에) / value(값): 중복 허용 O.
   + Key에 해당하는 값이 이미 존재하면 값 갱신함.
+3. map의 특징?
+3.요소의 저장 순서를 유지하지 않음.
+  + key: 중복 허용X 고유한값O (키를 통해 값을 얻어내기 때문에) / value(값): 중복 허용 O.
+  + Key에 해당하는 값이 이미 존재하면 값 갱신함.
 - put 메소드 : 
 <Map을 구현한 주요 클래스들을 살펴보자> <br>
 - put(Object key, Object value): key에 해당되는 value객체를 저장
@@ -32,11 +36,13 @@ map1.get("a"); //A
   + bucket에 맞는 index에 key와 value를 저장함.
 (ArrList와 LinkeddList는 index를 통해 데이터를 접근한다고 본다면 Hahsh Table은 Key를 index로 변경하여 데이터를 접근함.)
 - key가 해시함수를 통해서 key에 대한 index가 만들어지고 index를 통하여 bucket에 접근하기 때문에 저장되는 데이터가 많을수록, bucket의 크기가 적을 수록 index 충돌이 발생할 가능성이 높음.
-
-  - bucket은 배열 기반 구조임/ 충분히 큰 데이터를 가지고 있을 겨웅, 충돌시 entry의 저장방식을 LinkedList->TreeNode로 변경함.
+  - bucket은 배열 기반 구조임/ 충분히 큰 데이터를 가지고 있을 겨웅, 충돌시 entry의 저장방식을 LinkedList -> TreeNode로 변경함.
   - 장점 : key가 index로 변환되어 bucket에 대응하는 곳에 저장하기 때문에 값을 검색하는 것은 선형적으로 접근하는 ArrayList나 LinkedList 대비 더 빠름 / key를 null 값으로 할 일은 별로 없지만 null key가 가능함.
   - 단점 : bucket의 크기가 가득 차서 크기 조정이 필요할 경우 더 큰 해시맵으로 변경되기 때문에 지연시간이 걸릴 수 있음/ 데이터를 저장하는데 필요한 메모리보다 더 많은 메모리를 필요로 함/ HashMap에 저장된 key를 추출했을 때, 정렬되지 않음.
   - 사용용도 : index가 아닌 key를 이용하여 데이터 저장과 접근이 필요할 경우 사용함/ 데이터의 크기가 어느 정도 예상되는 경우 사용함/ 삽입 삭제가 빈번할 경우 사용함.
+1. hashtable의 상용 용도는? index가 아닌 key를 이용하여 데이터 저장과 접근이 필요할 경우 사용함/ 데이터의 크기가 어느 정도 예상되는 경우 사용함/ 삽입 삭제가 빈번할 경우 사용함.
+2. arraylist와 linkedlist보다 hashtable이 더 빠르다? (o,x) / 
+2. O
 ##### <HashMap 객체에 값을 넣고 확인해보자> <br>
 - 값 넣기 : put()
 
@@ -48,7 +54,7 @@ map1.get("a"); //A
 - lastKey() :
 - higherKey() :
 - lowerKey() :
-- 
+
 
 ##### <Map을 구현한 Properties 클래스는 알아두면 편리하다> <br>
 - Properties : hashtable을 상속받아 구현한것으로 (String,String)형태로 저장하는 단순화된 컬렉션클래스. 데이터를 파일로 읽고 쓰는 편리한 기 제공함
@@ -60,6 +66,8 @@ map1.get("a"); //A
   + Set<Object> keySet() : properties에 저장되어 있는 모든 key를 Set<Object>로 반환
   + Collection<Object> values() : properties에 저장되어 있는 모든 value를 Collection<Object>로 반환
  + boolean replace(key, oldValue) : key에 해당하는 value값인 olValue를 newValue로 변환 해당하는 key객체가 있으면 true, 없으면 false
+4. Set<Object> keySet() 는 무엇?
+4. properties에 저장되어 있는 모든 key를 Set<Object>로 반환
 <자바의 자료구조를 정리해보자><br>
 
 ## Ch08. 그 다음으로 많이 쓰는 얘들은 자바 유틸
