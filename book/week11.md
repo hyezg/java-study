@@ -37,10 +37,10 @@ map1.get("a"); //A
   - 장점 : key가 index로 변환되어 bucket에 대응하는 곳에 저장하기 때문에 값을 검색하는 것은 선형적으로 접근하는 ArrayList나 LinkedList 대비 더 빠름 / key를 null 값으로 할 일은 별로 없지만 null key가 가능함.
   - 단점 : bucket의 크기가 가득 차서 크기 조정이 필요할 경우 더 큰 해시맵으로 변경되기 때문에 지연시간이 걸릴 수 있음/ 데이터를 저장하는데 필요한 메모리보다 더 많은 메모리를 필요로 함/ HashMap에 저장된 key를 추출했을 때, 정렬되지 않음.
   - 사용용도 : index가 아닌 key를 이용하여 데이터 저장과 접근이 필요할 경우 사용함/ 데이터의 크기가 어느 정도 예상되는 경우 사용함/ 삽입 삭제가 빈번할 경우 사용함.
-<HashMap 객체에 값을 넣고 확인해보자> <br>
+##### <HashMap 객체에 값을 넣고 확인해보자> <br>
 - 값 넣기 : put()
-- 
-<HashMap 객체의 값을 확인하는 다른 방법들을 알아보자> <br>
+
+##### <HashMap 객체의 값을 확인하는 다른 방법들을 알아보자> <br>
 - 값 확인 : get()
 <정렬된 키의 목록을 원한다면 TreeMap을 사용하자> <br>
 - TreeMap : Key를 기준응로 정렬하는 것. (숫자 -> 알파벳 대문자 -> 알파벳 소문자 -> 한글)
@@ -49,7 +49,8 @@ map1.get("a"); //A
 - higherKey() :
 - lowerKey() :
 - 
-<Map을 구현한 Properties 클래스는 알아두면 편리하다> <br>
+
+##### <Map을 구현한 Properties 클래스는 알아두면 편리하다> <br>
 - Properties : hashtable을 상속받아 구현한것으로 (String,String)형태로 저장하는 단순화된 컬렉션클래스. 데이터를 파일로 읽고 쓰는 편리한 기 제공함
 - 메서드 :
   + Properties() : 객체 생성
@@ -63,7 +64,7 @@ map1.get("a"); //A
 
 
 ## Ch08. 그 다음으로 많이 쓰는 얘들은 자바 유틸
-<java.lang 다음으로 많이 사ㅛ되는 java.util 패키지> <br>
+##### <java.lang 다음으로 많이 사ㅛ되는 java.util 패키지> <br>
 - List,Map,Set,Collection 등 클래스들 있음
 - Collection framework : 자료구조 클래스들
 - interface collection interface 중복O,순서 기억 못함
@@ -76,10 +77,10 @@ map1.get("a"); //A
 - Map : key value가지는 자료구조, key는 중복X,순서X
 
   
-<날짜를 처리하기 위한 Date와 Calender> <br>
+##### <날짜를 처리하기 위한 Date와 Calender> <br>
 - Calndar : 기존 date클래스는 지역화를 지원안함. (지역화 : 국가별로 현재 날짜와 시간을 다를 수 있고 부분 지원하는 것)
 
-<컬렉션 객체들의 도우미 Collections> <br>
+##### <컬렉션 객체들의 도우미 Collections> <br>
 - Collection list,set,collection,map 자료구조 포함함
 - collection 인터페이스 : collection 프레임워크에서 가장 기존이 되는 인터페이스
   - 중복O,자료 저장 순서 기억X,
@@ -89,9 +90,9 @@ map1.get("a"); //A
     + next() : Object
   + - 대표메서드 : add(),size(),iterator()
 - 
-<배열을 쉽게 처리해주는 Arrays> <br>
+##### <배열을 쉽게 처리해주는 Arrays> <br>
 
-<임의의 값을 생성하기 위한 Random> <br>
+##### <임의의 값을 생성하기 위한 Random> <br>
 - Random 클래스 사용
 ```java
 import java.util.Random;
@@ -104,6 +105,6 @@ int value = r.nextInt(10);
 - nextInt() : int 타입의 최소~최대범위 안에서 랜덤한 숫자 리턴함
 - nextBoolean() : boolean타입의 true,false 랜덤한 값 리턴함
 - 특징 : 유사 난수가 생서될 수 있
-<문자열을 자르기 위한 String Tokenzior> <br>
+##### <문자열을 자르기 위한 String Tokenzior> <br>
 
-<java.math 패키지의 BigDecimal 클래스를 활용하자> <br>
+##### <java.math 패키지의 BigDecimal 클래스를 활용하자> <br>
