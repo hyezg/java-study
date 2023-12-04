@@ -123,3 +123,5 @@ int value = r.nextInt(10);
 ##### <문자열을 자르기 위한 String Tokenzior> <br>
 
 ##### <java.math 패키지의 BigDecimal 클래스를 활용하자> <br>
+- BigDecimal : java언어에서 숫자를 정밀하게 저장하고 표현할 수 있는 유일한 방법.
+- 
