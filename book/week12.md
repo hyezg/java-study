@@ -8,6 +8,19 @@
 - Files 클래스 : 모든 메소드가 static으로 선언되어 있어서 별도의 객체를 생성할 필요 X.
   
 #### <File 클래스를 이용하여 파일의 경로와 상태를 확인해 보자>
+```java
+boolean exists() // 해당 경로가 존재하는지 확인.
+boolean mkdir() // 디렉터리를 하나만 만듦
+boolean mkdirs() // 여러 개의 하위 디렉터리를 만듦.
+boolean isDirectory() // 해당 객체가 경로를 나타내는지 확인. 
+boolean isFile() // 해당 객체가 파일을 나타내는지 확인.
+boolean isHidden() // 해당 객체가 숨긴 파일인지 확인.
+boolean canRead() // 현재 수행중인 자바 프로그램이 해당 File객체에 읽을 수 있는 권한이 있는지 확인.
+boolean canWrite() // 현재 수행중인 자바 프로그램이 해당 File객체에 쓸 수 있는 권한이 있는지 확인.
+boolean canExecute() // 현재 수행중인 자바 프로그램이 해당 File객체를 실행할 수 있는 권한이 있는지 확인.
+long lastModified() // 파일이나 경로가 언제 생성되었는지 long타입의 현재 시간 리턴.
+boolean delete() // 파일 삭제.
+```
 
 #### <File 클래스를 이용하여 파일을 처리하자>
 ```java
