@@ -40,4 +40,4 @@ File[] listFiles(FileFilter filter) // 현재 디렉터리 하위 목록 중, fi
 #### <자바에서 웹 페이지 요청을 하려면 어떻게 해야 하지?>
 
  
-참고 (https://velog.io/@always/%EC%9E%90%EB%B0%94%EC%9D%98-%EC%8B%A0-26%EC%9E%A5-%ED%8C%8C%EC%9D%BC%EC%97%90-%EC%9E%88%EB%8A%94-%EA%B2%83%EC%9D%84-%EC%9D%BD%EA%B3%A0-%EC%93%B0%EB%A0%A4%EB%A9%B4-%EC%95%84%EC%9D%B4%EC%98%A4%EB%A5%BC-%EC%95%8C%EC%95%84%EC%95%BC%EC%A3%A0) 
+참고 <a href="https://velog.io/@always/%EC%9E%90%EB%B0%94%EC%9D%98-%EC%8B%A0-26%EC%9E%A5-%ED%8C%8C%EC%9D%BC%EC%97%90-%EC%9E%88%EB%8A%94-%EA%B2%83%EC%9D%84-%EC%9D%BD%EA%B3%A0-%EC%93%B0%EB%A0%A4%EB%A9%B4-%EC%95%84%EC%9D%B4%EC%98%A4%EB%A5%BC-%EC%95%8C%EC%95%84%EC%95%BC%EC%A3%A0">링크</a>
