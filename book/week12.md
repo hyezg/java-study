@@ -9,7 +9,10 @@
   생성한 파일 객체가 가리키고 있는 것이 존재하는지, 파일인지 경로인지,읽거나 쓰거나 실행할 수 있는지 언제 수정되었는지 확인하는 기능을 제공함.
 - Files 클래스 : 모든 메소드가 static으로 선언되어 있어서 별도의 객체를 생성할 필요X.
 Q) File과 Files의 차이점?
-A) Files의 모든 메소드는 static 이라 객체를 생성할 필요X.
+A) Files의 모든 메소드는 static 이라 객체를 생성할 필요X./
+
+Q) file클래스의 list() 메소드와 listfiles() 메소드의 차이는?
+A) file은 디렉터리 하위 목록을 String 배열로 리턴하지만 listfiles는 하위 목록을 file 배열로 리턴함.
 
 #### <File 클래스를 이용하여 파일의 경로와 상태를 확인해 보자>
 ```java
@@ -71,7 +74,19 @@ A) BufferedWriter
 - FileReader
 - BufferedReader
 
+Q) 파일을 읽고 문자열을 처리하기 위해서 필요한 scanner 클래스가 속해있는 패키지는?
+A)java.util
+
+
 ## ch11. Serializable과 NIO도 살펴 봅시다
+- Serialization : 객체를 데이터 스트림으로 변환하는 작업.
+- Deserialization : 데이터 스트림을 객체로 변환하는 작업.
+- 
+- Serilizable  interface : 파일을 읽거나 쓰고, 다른 서버로 보내거나 받을 때 반드시 구현해야함.(직렬화,역직렬화 가능함)
+- transient : 직렬화되면 안되는 값에 대해서 transient를 사용할 수 o.
+- ObjectOutputStream & ObjectInputStream : 기반 스트림을 필요로 하는 보조스트림. 객체를 생성할 때 입출력할 기반 스트림을 지정해줘야함, 자바 데이터를 직렬화, 역직렬화 해주는 클래스
+
+- NIO
 #### <네트워크 프로그래밍이란?>
 
 #### <소켓 통신을 하기 위해서 알아야 하는 Socket 클래스>
