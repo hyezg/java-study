@@ -78,11 +78,12 @@ Q) 파일을 읽고 문자열을 처리하기 위해서 필요한 scanner 클래
 A)java.util
 
 
-## ch11. Serializable과 NIO도 살펴 봅시다ㅜ
+## ch11. Serializable과 NIO도 살펴 봅시다
 #### <Serializable에 대해서 좀 살펴 보자>
 - Serialization : 객체를 데이터 스트림으로 변환하는 작업.
 - Deserialization : 데이터 스트림을 객체로 변환하는 작업.
-- 
+
+  
 - Serilizable  interface : 파일을 읽거나 쓰고, 다른 서버로 보내거나 받을 때 반드시 구현해야함.(직렬화,역직렬화 가능함)
 - transient : 직렬화되면 안되는 값에 대해서 transient를 사용할 수 o.
 - ObjectOutputStream & ObjectInputStream : 기반 스트림을 필요로 하는 보조스트림. 객체를 생성할 때 입출력할 기반 스트림을 지정해줘야함, 자바 데이터를 직렬화, 역직렬화 해주는 클래스
